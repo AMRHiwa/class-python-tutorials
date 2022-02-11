@@ -1,10 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb  4 11:08:16 2022
-
-@author: azizi
-"""
-
+# practice for interhance oop
 class GrandPa:
     def __init__(self, name):
         self.grandpa_name = name
