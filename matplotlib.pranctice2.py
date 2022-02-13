@@ -1,4 +1,4 @@
-"""
+
 # many example for matplotlib packeg and make chart in python
 
 # -------------- example #1 --------------
@@ -221,4 +221,3 @@ plt.savefig("picture_name_and_address.jpg")
 # show the chart 
 plt.show()
 # ---------------------------------------------------------
-"""
