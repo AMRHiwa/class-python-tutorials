@@ -13,6 +13,10 @@ print(now)
 # show type of variable now
 print(f"type of now variable is : {type(now)}")     
 
+
+
+
+
 #-------example 2-----------
 import datetime
 
@@ -31,6 +35,11 @@ object_of_date = datetime.date(1998,10,13)
 # show the info
 print(object_of_date)
 
+
+
+
+
+
 #--------example 4----------
 from datetime import date
 
@@ -40,6 +49,10 @@ today = date.today()
 # show the info
 print(today)
 
+
+
+
+
 #--------example 5-----------
 from datetime import date
 
@@ -48,6 +61,10 @@ timestamp = date.fromtimestamp(2525252525)
 
 # show the info
 print(timestamp)
+
+
+
+
 
 #--------example 6------------
 from datetime import date
@@ -63,6 +80,11 @@ print(f"month of today: {today.month}")
 
 # show the year
 print(f"year of today: {today.year}")
+
+
+
+
+
 
 #--------example 7-----------
 from datetime import time
@@ -83,6 +105,11 @@ print("c = ", c)
 d = time(11, 34, 56, 234566)
 print("d = ",d)
 
+
+
+
+
+
 #----------example 8---------
 from datetime import time
 
@@ -100,6 +127,11 @@ print(f"hour : {time1.hour}")
 
 #print(dir(time))
 
+
+
+
+
+
 #----------example 9----------
 from datetime import datetime
 
@@ -110,6 +142,11 @@ print("date of burn of love \na = ", a)
 # datetime(year, month, day, hour, minute, second)
 b = datetime(1998,2,18,13,30,40)
 print("b = ", b)
+
+
+
+
+
 
 #--------example 10-----------
 from datetime import datetime
@@ -135,6 +172,11 @@ print(f"minute : {a.minute}")
 # show the second
 print(f"second : {a.second}")
 
+
+
+
+
+
 #---------example 11------------
 from datetime import date
 
@@ -153,6 +195,10 @@ print(f"difference : {difference_date}")
 
 # show type of difference_date
 print(f"type of difference date : {type(difference_date)}")
+
+
+
+
 
 
 #-----------example 12------------
@@ -174,6 +220,11 @@ print(f"difference : {difference_date}")
 # show type of difference_date
 print(f"type of difference date : {type(difference_date)}")
 
+
+
+
+
+
 # ----------example 13-------------
 from datetime import timedelta
 
@@ -186,3 +237,68 @@ t3 = t1 - t2
 
 # show the difference
 print(t3)
+
+
+
+
+
+#--------example 14-------------
+from datetime import timedelta
+
+# create 2 variable to storage 2 date
+t1 = timedelta(seconds= 33)
+t2 = timedelta(seconds= 54)
+
+# calculate 
+t3 = t1 - t2
+
+# show the difference time
+print(f"t3 = {t3}")
+
+# show the absolut difference time
+print(f"t3 = {abs(t3)}")
+
+
+
+
+
+
+#---------example 15------------
+from datetime import timedelta
+
+# create a variable to storage a date for calculate to second
+t = timedelta(days=5, hours=25, seconds=325)
+
+# show the calculate of t to the second
+print(f"total seconds : {t.total_seconds()}")
+
+
+
+
+
+
+#--------example 16------------
+from datetime import datetime
+
+# current date and time
+now = datetime.now()
+
+# transform time to the string with strftime method
+t = now.strftime("%H:%M:%S")
+
+# show the result
+print(f"time : {t}")
+
+# transform now to the string with month/day/year Hour:Minute:Second (usa calendar)
+s = now.strftime("%m/%d/%Y, %H:%M:%S")
+
+# show the result
+print(f"date and time : {s}")
+
+# transform now to the string with day/month/year Hour:Minute:Second (uk calendar)
+s2 = now.strftime("%d/%m/%Y, %H:%M:%S")
+
+# show the result
+print(f"date and time : {s2}")
+
+
