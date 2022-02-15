@@ -302,3 +302,56 @@ s2 = now.strftime("%d/%m/%Y, %H:%M:%S")
 print(f"date and time : {s2}")
 
 
+
+
+#--------example 16---------
+from datetime import datetime
+
+# create a variable to storage a str date
+date_str_Hiwa = "13 October, 1998"
+date_str_Neda = "18 February, 1998"
+
+# show the dates
+print(f"date of Hiwa : {date_str_Hiwa}")
+print(f"date of Neda : {date_str_Neda}")
+
+# create variables to storage object time 
+date_object_Hiwa = datetime.strptime(date_str_Hiwa, "%d %B, %Y")
+date_object_Neda = datetime.strptime(date_str_Neda, "%d %B, %Y")
+
+# show the dates
+print(f"date of Hiwa (datetime object) : {date_object_Hiwa}")
+print(f"date of Neda (datetime object) : {date_object_Neda}")
+
+
+
+
+
+# -----------example 17-----------
+from datetime import datetime
+import pytz
+
+# create a variable to storage date and time of now
+local = datetime.now()
+
+# show the information
+# strftime("month/day/year , hour:minute:second" )
+print("Local : {}".format(local.strftime("%m/%d/%Y , %H:%M:%S")))
+
+# getting timezone information with pytz modul
+tz_NY = pytz.timezone("America/New_York")
+
+# getting time and date of now with american timezone and storage it in a variable
+datetime_NY = datetime.now(tz_NY)
+
+# show the time and date with american timezone
+print("time and date in New York : {}".format(datetime_NY.strftime("%m/%d/%Y , %H:%M:%S")))
+
+# getting timezone information with pytz modul
+tz_London = pytz.timezone("Europe/London")
+
+# getting time and date of now with american timezone and storage it in a variable
+datetime_London = datetime.now(tz_London)
+
+# show the time and date with american timezone
+print("time and date in London : {}".format(datetime_London.strftime("%m/%d/%Y , %H:%M:%S")))
