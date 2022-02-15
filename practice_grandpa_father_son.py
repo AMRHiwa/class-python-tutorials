@@ -1,4 +1,8 @@
-# practice for interhance oop
+"""
+author : Hiwa Azizi
+practice for interhance oop2022
+"""
+
 class GrandPa:
     def __init__(self, name):
         self.grandpa_name = name

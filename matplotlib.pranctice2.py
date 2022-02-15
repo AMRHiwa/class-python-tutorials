@@ -1,5 +1,9 @@
+"""
+author : Hiwa Azizi
+many example for matplotlib packeg and make chart in python
+2022
+"""
 
-# many example for matplotlib packeg and make chart in python
 
 # -------------- example #1 --------------
 

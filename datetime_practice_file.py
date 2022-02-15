@@ -1,4 +1,8 @@
-
+"""
+author : Hiwa Azizi
+example tutorials for datetime modul in python
+15/02/2022
+"""
 #-------example 1----------
 from calendar import month
 from dataclasses import dataclass

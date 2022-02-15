@@ -1,3 +1,8 @@
+"""
+author : Hiwa Azizi
+python animation for happy birthday
+2022
+"""
 from time import sleep
 from colorama import Fore  # , Back, Style, init
 import os
