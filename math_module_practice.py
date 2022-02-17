@@ -8,7 +8,7 @@ for practicing with math module and it's methods
 
 
 # first of all we have to import math module with import order or from ... import
-import math 
+import math
 
 # floor method 
 # we show the ability of floor function from math with a different values
@@ -75,3 +75,40 @@ print(f"factorial of 8 is {math.factorial(8)}")
 
 # we can calculate neper power of x with math.exp(x)
 print(f"e power of 5 is : {math.exp(5)}")
+
+
+# we can call logarithm ability from math
+# we can calculate logarithm y in base of x with this method math.log(y, x)
+# if we don't give it base it calculate of logarithm with neper as base
+print(f"logarithm 2 in base 2 is : {math.log(2, 2)}")
+# print(f"logarithm 4 in base 1 is : {math.log(4, 1)}")   Error ZeroDivisionError
+print(f"logarithm 9 in base 3 is : {math.log(9, 3)}")
+print(f"logarithm 2 in base neper is : {math.log(2)}")
+print(f"logarithm e in base neper is : {math.log(math.e)}")
+
+
+# we can use square root with math module by math.sqrt(x)
+print(f"the square root of 8 is : {math.sqrt(8)}")
+print(f"the square root of 16 is : {math.sqrt(16)}")
+
+
+# we can calculate x power of y with math.pow(x, y)
+print(f"3 power of 4 is : {math.pow(3, 4)}")
+
+
+# we can call trigonometric function like sin , cos , tan with radians argument 
+print(f"sin of pi is : {math.sin(math.pi)}")
+print(f"cos of pi is : {math.cos(math.pi)}")
+print(f"tan of pi is : {math.tan(math.pi)}")
+
+
+# we can transform radians to degrees with math.degrees(x)
+print(f"pi in radian is : {math.degrees(math.pi)} deg")
+
+
+# we can transform degrees to radians with math.radians(x)
+print(f"180 in deg is : {math.radians(180)} radian ")
+
+
+# we can call sinh , cosh , tanh with math.sinh(x) 
+# math.cosh(x) and math.tanh(x)
