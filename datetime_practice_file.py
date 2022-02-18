@@ -3,9 +3,16 @@ author : Hiwa Azizi
 example tutorials for datetime modul in python
 15/02/2022
 """
+
+
+
+
 #-------example 1----------
-from calendar import month
-from dataclasses import dataclass
+"""
+in this example we want to
+get today information by 
+datetime.now()
+"""
 import datetime
 
 # get information about time and date of now
@@ -22,6 +29,10 @@ print(f"type of now variable is : {type(now)}")
 
 
 #-------example 2-----------
+"""
+in this example we want to get
+today's information by datetime.today()
+"""
 import datetime
 
 # get date information of today
@@ -30,7 +41,16 @@ today = datetime.datetime.today()
 # show the information
 print(today)
 
+
+
+
+
+
 #-------example 3---------
+"""
+in this example we want to create
+a date object by date()
+"""
 import datetime
 
 # make a object for storaging date in it
@@ -45,6 +65,10 @@ print(object_of_date)
 
 
 #--------example 4----------
+"""
+we want to get today's 
+information by date.today()
+"""
 from datetime import date
 
 # make a variable to storage date of today
@@ -58,6 +82,10 @@ print(today)
 
 
 #--------example 5-----------
+"""
+in this example we want to work 
+with uinx hour by date.fromtimstamp()
+"""
 from datetime import date
 
 # make a variable to storage a information
@@ -70,7 +98,14 @@ print(timestamp)
 
 
 
+
 #--------example 6------------
+"""
+in this example we want to work
+day , month and year attribute of 
+date object
+"""
+
 from datetime import date
 
 # create a variable to storage a date
@@ -91,6 +126,11 @@ print(f"year of today: {today.year}")
 
 
 #--------example 7-----------
+"""
+in this example, we want to make a
+time object by three ways
+"""
+
 from datetime import time
 
 # time(hour = 0, minute = 0, second = 0)
@@ -115,6 +155,12 @@ print("d = ",d)
 
 
 #----------example 8---------
+"""
+in this example, we want to work 
+with hour, minute and second attributes 
+in time object
+"""
+
 from datetime import time
 
 # make a variable to storage a time
@@ -137,6 +183,11 @@ print(f"hour : {time1.hour}")
 
 
 #----------example 9----------
+"""
+in this example we want to create a 
+datetime object with date and time
+"""
+
 from datetime import datetime
 
 # datetime(year, month, day)
