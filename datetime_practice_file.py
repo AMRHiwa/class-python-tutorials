@@ -204,6 +204,11 @@ print("b = ", b)
 
 
 #--------example 10-----------
+"""
+in this example we want to work 
+with datetime attributes like day
+, hour, month and ect"""
+
 from datetime import datetime
 
 # datetime(year, month, day, hour, minute, second, microsecond)
@@ -233,6 +238,11 @@ print(f"second : {a.second}")
 
 
 #---------example 11------------
+"""
+in this example we want to calculate 
+difference between to time and date
+"""
+
 from datetime import date
 
 # make 2 variable of date for calculate of difference between of them
@@ -257,6 +267,11 @@ print(f"type of difference date : {type(difference_date)}")
 
 
 #-----------example 12------------
+"""
+in this example we want to calculate 
+difference between two objects of datetime
+"""
+
 from datetime import datetime
 
 # make 2 variable of date for calculate of difference between of them
@@ -281,6 +296,12 @@ print(f"type of difference date : {type(difference_date)}")
 
 
 # ----------example 13-------------
+"""
+in this example we want to create two 
+timedelta's objects and calculate 
+difference between of them
+"""
+
 from datetime import timedelta
 
 # make 2 variable to storage 2 difference date
@@ -298,6 +319,14 @@ print(t3)
 
 
 #--------example 14-------------
+"""
+in this example we want to create two 
+timedelta's objects and calculate 
+difference between of them and work 
+with negative timedelta
+"""
+
+
 from datetime import timedelta
 
 # create 2 variable to storage 2 date
@@ -359,7 +388,7 @@ print(f"date and time : {s2}")
 
 
 
-#--------example 16---------
+#--------example 17---------
 from datetime import datetime
 
 # create a variable to storage a str date
@@ -382,7 +411,7 @@ print(f"date of Neda (datetime object) : {date_object_Neda}")
 
 
 
-# -----------example 17-----------
+# -----------example 18-----------
 from datetime import datetime
 import pytz
 
