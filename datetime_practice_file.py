@@ -348,6 +348,12 @@ print(f"t3 = {abs(t3)}")
 
 
 #---------example 15------------
+"""
+In this example we want to create a
+timedelta object and calculate past
+total seconds since unix hour to now
+by total_seconds()
+"""
 from datetime import timedelta
 
 # create a variable to storage a date for calculate to second
@@ -362,6 +368,11 @@ print(f"total seconds : {t.total_seconds()}")
 
 
 #--------example 16------------
+"""
+In this example we want to transform
+datetime object to string with custom
+format by strftime method
+"""
 from datetime import datetime
 
 # current date and time
@@ -388,7 +399,13 @@ print(f"date and time : {s2}")
 
 
 
+
 #--------example 17---------
+"""
+In this example we want to transform 
+a string date and time to datetime object
+by strptime method
+"""
 from datetime import datetime
 
 # create a variable to storage a str date
@@ -411,7 +428,13 @@ print(f"date of Neda (datetime object) : {date_object_Neda}")
 
 
 
+
 # -----------example 18-----------
+"""
+In this example we try to work with
+pytz (python timezone module) to get time
+from different timezone
+"""
 from datetime import datetime
 import pytz
 
