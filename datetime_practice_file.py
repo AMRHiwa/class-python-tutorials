@@ -5,8 +5,7 @@ example tutorials for datetime modul in python
 """
 
 
-
-
+# datetime.datetime.now()   method
 #-------example 1----------
 """
 in this example we want to
@@ -28,6 +27,9 @@ print(f"type of now variable is : {type(now)}")
 
 
 
+
+
+# datetime.datetime.today()      method
 #-------example 2-----------
 """
 in this example we want to get
@@ -46,6 +48,8 @@ print(today)
 
 
 
+
+# datetime.date()   class
 #-------example 3---------
 """
 in this example we want to create
@@ -64,6 +68,9 @@ print(object_of_date)
 
 
 
+
+
+# date.today()  method
 #--------example 4----------
 """
 we want to get today's 
@@ -81,6 +88,10 @@ print(today)
 
 
 
+
+
+
+# date.fromtimestamp()  method
 #--------example 5-----------
 """
 in this example we want to work 
@@ -93,6 +104,8 @@ timestamp = date.fromtimestamp(2525252525)
 
 # show the info
 print(timestamp)
+
+
 
 
 
@@ -125,6 +138,9 @@ print(f"year of today: {today.year}")
 
 
 
+
+
+# date.time()   class
 #--------example 7-----------
 """
 in this example, we want to make a
@@ -154,6 +170,9 @@ print("d = ",d)
 
 
 
+
+
+# datetime.time     class attributes
 #----------example 8---------
 """
 in this example, we want to work 
@@ -182,6 +201,9 @@ print(f"hour : {time1.hour}")
 
 
 
+
+
+# datetime.datetime()   class
 #----------example 9----------
 """
 in this example we want to create a 
@@ -203,6 +225,8 @@ print("b = ", b)
 
 
 
+
+# datetime.datetime     class attributes
 #--------example 10-----------
 """
 in this example we want to work 
@@ -237,6 +261,8 @@ print(f"second : {a.second}")
 
 
 
+
+# datetime.timedelta    class 
 #---------example 11------------
 """
 in this example we want to calculate 
@@ -266,6 +292,8 @@ print(f"type of difference date : {type(difference_date)}")
 
 
 
+
+# datetime.timedelta    class
 #-----------example 12------------
 """
 in this example we want to calculate 
@@ -295,6 +323,8 @@ print(f"type of difference date : {type(difference_date)}")
 
 
 
+
+# datetime.timedelta    class
 # ----------example 13-------------
 """
 in this example we want to create two 
@@ -318,6 +348,9 @@ print(t3)
 
 
 
+
+
+# datetime.timedelta    class
 #--------example 14-------------
 """
 in this example we want to create two 
@@ -347,7 +380,9 @@ print(f"t3 = {abs(t3)}")
 
 
 
-#---------example 15------------
+
+# timedelta.total_seconds()     method
+#-----------example 15------------
 """
 In this example we want to create a
 timedelta object and calculate past
@@ -367,6 +402,7 @@ print(f"total seconds : {t.total_seconds()}")
 
 
 
+# datetime.strftime()   method
 #--------example 16------------
 """
 In this example we want to transform
@@ -400,6 +436,8 @@ print(f"date and time : {s2}")
 
 
 
+
+# datetime.strptime()   method
 #--------example 17---------
 """
 In this example we want to transform 
@@ -429,11 +467,16 @@ print(f"date of Neda (datetime object) : {date_object_Neda}")
 
 
 
+# pytz.timezone()   method 
 # -----------example 18-----------
 """
 In this example we try to work with
 pytz (python timezone module) to get time
 from different timezone
+**** This module is not default python's
+module and you have to install it in cmd
+by this command :
+    "pip install pytz"
 """
 from datetime import datetime
 import pytz
