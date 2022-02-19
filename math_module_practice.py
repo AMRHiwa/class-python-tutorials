@@ -64,7 +64,7 @@ print(f"IS {math.pi} infinit value ? {math.isinf(math.pi)} ")
 
 
 
-# math.nan(x)
+# math.nan
 # we can use or import NaN (Not a Number) with math
 print(f"nan or \"not a number\" in math module is : {math.nan}")
 
