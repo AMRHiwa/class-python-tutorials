@@ -17,6 +17,10 @@ print(p)
 plt.plot(p)      #make the chart
 plt.show()       #show the chart
 
+
+
+
+
 # -------------- example #2 --------------
 import matplotlib
 import matplotlib.pyplot as plt
@@ -24,6 +28,11 @@ import matplotlib.pyplot as plt
 
 plt.plot([5, 6, 11], "purple")      #make the chart
 plt.show()       #show the chart
+
+
+
+
+
 
 # -------------- example #3 --------------
 
@@ -40,6 +49,11 @@ plt.ylabel("f(x) = X^2")  #create a label for y
 plt.title("the chart!")   #create a title for chart
 
 plt.show()                #show a chart
+
+
+
+
+
 # -------------- example #4 --------------
 
 import matplotlib
@@ -57,6 +71,11 @@ plt.xticks(x2, x1)                          # We attribute x1 to x2
 plt.yticks(y2, y1)                          # We attribute y1 to y2
 
 plt.show()
+
+
+
+
+
 # -------------- example #5 ---------------
 
 import matplotlib
@@ -71,6 +90,11 @@ plt.xlabel("time")     # label for x
 plt.ylabel("output")   # label for y
 plt.title("Sin")       # title for this chart
 plt.show()             # show the chart
+
+
+
+
+
 
 # -------------- example #6 ----------------
 
@@ -88,6 +112,11 @@ plt.ylabel("output")          # associate a name for the community y
 plt.title("sin(2Pit) * cos(2Pit)")         # associate a name for the chart
 plt.show()                    # show the chart
 
+
+
+
+
+
 # -------------- example #7 --------------
 
 import numpy as np
@@ -97,6 +126,12 @@ x = np.arange(20)     # create the range from 0 to 20
 plt.bar(x, x**3, align="center", width=0.5, color="red")  # create a bar chart for x and x^3
 plt.show()           # show the chart
 
+
+
+
+
+
+
 # -------------- example #8 ---------------
 
 import numpy as np
@@ -105,6 +140,11 @@ import matplotlib.pyplot as plt
 x = np.arange(20)   # create a range from 0 to 20
 plt.scatter(x, x**3, linewidths=2, color="purple")   # create a scatter chart for x , x^3
 plt.show()          # show the chart
+
+
+
+
+
 # -------------- example #9 ---------------
 
 import numpy as np
@@ -118,6 +158,12 @@ plt.scatter(x, x + np.random.randn(len(x)), linewidths=1.5, color="purple")
 
 # show the chart 
 plt.show()
+
+
+
+
+
+
 # -------------- example #10 ----------------
 
 import numpy as np
@@ -131,6 +177,12 @@ plt.step(x, x**3, color="orange", linewidth=1.25)
 
 # show the chart 
 plt.show()
+
+
+
+
+
+
 # -------------- example #11 ----------------
 
 import numpy as np
@@ -149,6 +201,12 @@ pl.pie(score, labels= lesson)
 
 # show the chart
 plt.show()
+
+
+
+
+
+
 # -------------- example #12 ----------------
 
 import numpy as np
@@ -171,6 +229,12 @@ for score in scores:
 
 # show the chart
 plt.show()
+
+
+
+
+
+
 # -------------- example #13 ----------------
 
 import numpy as np
@@ -190,6 +254,12 @@ plt.title("Histogram")
 
 # show the chart
 plt.show()
+
+
+
+
+
+
 # -------------- example #14 -----------------
 
 import matplotlib.pyplot as plt
@@ -204,6 +274,12 @@ plt.hist([data1, data2])
 
 # show the chart 
 plt.show()
+
+
+
+
+
+
 # -------------- example #15 -------------------
 
 import matplotlib.pyplot as plt
@@ -224,4 +300,4 @@ plt.savefig("picture_name_and_address.jpg")
 
 # show the chart 
 plt.show()
-# ---------------------------------------------------------
+

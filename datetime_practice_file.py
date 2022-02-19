@@ -3,9 +3,15 @@ author : Hiwa Azizi
 example tutorials for datetime modul in python
 15/02/2022
 """
+
+
+# datetime.datetime.now()   method
 #-------example 1----------
-from calendar import month
-from dataclasses import dataclass
+"""
+in this example we want to
+get today information by 
+datetime.now()
+"""
 import datetime
 
 # get information about time and date of now
@@ -21,7 +27,14 @@ print(f"type of now variable is : {type(now)}")
 
 
 
+
+
+# datetime.datetime.today()      method
 #-------example 2-----------
+"""
+in this example we want to get
+today's information by datetime.today()
+"""
 import datetime
 
 # get date information of today
@@ -30,7 +43,18 @@ today = datetime.datetime.today()
 # show the information
 print(today)
 
+
+
+
+
+
+
+# datetime.date()   class
 #-------example 3---------
+"""
+in this example we want to create
+a date object by date()
+"""
 import datetime
 
 # make a object for storaging date in it
@@ -44,7 +68,14 @@ print(object_of_date)
 
 
 
+
+
+# date.today()  method
 #--------example 4----------
+"""
+we want to get today's 
+information by date.today()
+"""
 from datetime import date
 
 # make a variable to storage date of today
@@ -57,7 +88,15 @@ print(today)
 
 
 
+
+
+
+# date.fromtimestamp()  method
 #--------example 5-----------
+"""
+in this example we want to work 
+with uinx hour by date.fromtimstamp()
+"""
 from datetime import date
 
 # make a variable to storage a information
@@ -70,7 +109,16 @@ print(timestamp)
 
 
 
+
+
+
 #--------example 6------------
+"""
+in this example we want to work
+day , month and year attribute of 
+date object
+"""
+
 from datetime import date
 
 # create a variable to storage a date
@@ -90,7 +138,15 @@ print(f"year of today: {today.year}")
 
 
 
+
+
+# date.time()   class
 #--------example 7-----------
+"""
+in this example, we want to make a
+time object by three ways
+"""
+
 from datetime import time
 
 # time(hour = 0, minute = 0, second = 0)
@@ -114,7 +170,16 @@ print("d = ",d)
 
 
 
+
+
+# datetime.time     class attributes
 #----------example 8---------
+"""
+in this example, we want to work 
+with hour, minute and second attributes 
+in time object
+"""
+
 from datetime import time
 
 # make a variable to storage a time
@@ -136,7 +201,15 @@ print(f"hour : {time1.hour}")
 
 
 
+
+
+# datetime.datetime()   class
 #----------example 9----------
+"""
+in this example we want to create a 
+datetime object with date and time
+"""
+
 from datetime import datetime
 
 # datetime(year, month, day)
@@ -152,7 +225,14 @@ print("b = ", b)
 
 
 
+
+# datetime.datetime     class attributes
 #--------example 10-----------
+"""
+in this example we want to work 
+with datetime attributes like day
+, hour, month and ect"""
+
 from datetime import datetime
 
 # datetime(year, month, day, hour, minute, second, microsecond)
@@ -181,7 +261,14 @@ print(f"second : {a.second}")
 
 
 
+
+# datetime.timedelta    class 
 #---------example 11------------
+"""
+in this example we want to calculate 
+difference between to time and date
+"""
+
 from datetime import date
 
 # make 2 variable of date for calculate of difference between of them
@@ -205,7 +292,14 @@ print(f"type of difference date : {type(difference_date)}")
 
 
 
+
+# datetime.timedelta    class
 #-----------example 12------------
+"""
+in this example we want to calculate 
+difference between two objects of datetime
+"""
+
 from datetime import datetime
 
 # make 2 variable of date for calculate of difference between of them
@@ -229,7 +323,15 @@ print(f"type of difference date : {type(difference_date)}")
 
 
 
+
+# datetime.timedelta    class
 # ----------example 13-------------
+"""
+in this example we want to create two 
+timedelta's objects and calculate 
+difference between of them
+"""
+
 from datetime import timedelta
 
 # make 2 variable to storage 2 difference date
@@ -246,7 +348,18 @@ print(t3)
 
 
 
+
+
+# datetime.timedelta    class
 #--------example 14-------------
+"""
+in this example we want to create two 
+timedelta's objects and calculate 
+difference between of them and work 
+with negative timedelta
+"""
+
+
 from datetime import timedelta
 
 # create 2 variable to storage 2 date
@@ -267,7 +380,15 @@ print(f"t3 = {abs(t3)}")
 
 
 
-#---------example 15------------
+
+# timedelta.total_seconds()     method
+#-----------example 15------------
+"""
+In this example we want to create a
+timedelta object and calculate past
+total seconds since unix hour to now
+by total_seconds()
+"""
 from datetime import timedelta
 
 # create a variable to storage a date for calculate to second
@@ -281,7 +402,13 @@ print(f"total seconds : {t.total_seconds()}")
 
 
 
+# datetime.strftime()   method
 #--------example 16------------
+"""
+In this example we want to transform
+datetime object to string with custom
+format by strftime method
+"""
 from datetime import datetime
 
 # current date and time
@@ -308,7 +435,15 @@ print(f"date and time : {s2}")
 
 
 
-#--------example 16---------
+
+
+# datetime.strptime()   method
+#--------example 17---------
+"""
+In this example we want to transform 
+a string date and time to datetime object
+by strptime method
+"""
 from datetime import datetime
 
 # create a variable to storage a str date
@@ -331,7 +466,18 @@ print(f"date of Neda (datetime object) : {date_object_Neda}")
 
 
 
-# -----------example 17-----------
+
+# pytz.timezone()   method 
+# -----------example 18-----------
+"""
+In this example we try to work with
+pytz (python timezone module) to get time
+from different timezone
+**** This module is not default python's
+module and you have to install it in cmd
+by this command :
+    "pip install pytz"
+"""
 from datetime import datetime
 import pytz
 
