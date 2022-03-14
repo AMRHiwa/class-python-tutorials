@@ -38,3 +38,35 @@ print(f"val1 is : {val1}, type of val1 : {type(val1)}")
 
 val2 = json.dumps(["Hiwa", "Neda"])
 print(f"val2 is : {val2}, type of val2 : {type(val2)}")
+
+val3 = json.dumps(("Hiwa", "Neda"))
+print(f"val3 is : {val3}, type of val3 : {type(val3)}")
+
+val4 = json.dumps("Neda B24")
+print(f"val4 is : {val4}, type of val4 : {type(val4)}")
+
+val5 = json.dumps(24)
+print(f"val5 is : {val5}, type of val5 : {type(val5)}")
+
+val6 = json.dumps(1998.2)
+print(f"val6 is : {val6}, type of val6 : {type(val6)}")
+
+val7 = json.dumps(True)
+print(f"val7 is : {val7}, type of val7 : {type(val7)}")
+
+val8 = json.dumps(None)
+print(f"val8 is : {val8}, type of val8 : {type(val8)}")
+
+x = {
+    "name" : "Hiwa",
+    "age" : 24,
+    "relationship": False,
+    "love" : ("Neda"),
+    "pet" : None,
+    "cars": [
+        {"name" : "Quic", "Model" : 1399},
+        {"name": "Arisan", "Model": 1394}
+    ]
+}
+y = json.dumps(x)
+print(f"y is :\n{y}\ntype of y: {type(y)}")
