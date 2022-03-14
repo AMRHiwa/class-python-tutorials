@@ -5,7 +5,6 @@ OS module and it's methods
 """
 
 # we have to import os module in our files like this
-from fileinput import filename
 import os
 
 
@@ -83,21 +82,21 @@ for dirpath, dirname, filename in os.walk(os.getcwd()):
 
 # show the what is the os.walk and what's it type
 print(f"what is in os.walk(os.getcwd()): {os.walk(os.getcwd())}")
-print("type of os.walk(os.getcwd()) : {}".format(type(os.getcwd())))
+print("type of os.walk(os.getcwd()) : {}".format(type(os.walk(os.getcwd()))))
 
 
 
 
 # os.mkdir("address and directory name" or "directory name")
 # we can make a directory by this method in current directory or custom directory
-# os.mkdir("test_folder")
+os.mkdir("test_folder")
 
 
 
 
 # os.rmdir("address and directory name" or "directory name")
 # we can delete a empty directory by this method
-# os.rmdir("test_folder")
+os.rmdir("test_folder")
 
 
 
@@ -109,15 +108,15 @@ print("type of os.walk(os.getcwd()) : {}".format(type(os.getcwd())))
 your directory with it's files all deleted now
 """
 # For example, suppose you have a "new folder" list and it contains a lot of files 
-# import shutil
-# shutil.rmtree("New folder")
+import shutil
+shutil.rmtree("New folder")
 
 
 
 
 # os.mkdirs("dir_name/first_sub_dir_name/second_sub_of_sub_dir_name/ ...")
 # by this method you can create a directory with sub directories
-# os.makedirs("A/B/C/D") 
+os.makedirs("A/B/C/D") 
 
 
 
@@ -125,26 +124,26 @@ your directory with it's files all deleted now
 # os.removedirs(""dir_name/first_sub_dir_name/second_sub_of_sub_dir_name/ ..."")
 # by this method you can delete a directory with it's subdirectories
 # os.removedirs("A")     Error  OSError: [WinError 145] The directory is not empty: 'A'
-# os.removedirs("A/B/C/D")
+os.removedirs("A/B/C/D")
 
 
 
 
 # os.rename("current name", "new name")
 # by this method we can rename the file (suppose you have f.txt in current directory)
-# os.rename("f.txt", "name.txt")
+os.rename("f.txt", "name.txt")
 
 
 
 # os.stat("name and address")
 # this method return the stat of one file
-# print("stat of file : {}".format(os.stat("math_module_practice.py")))
+print("stat of file : {}".format(os.stat("math_module_practice.py")))
 
 
 
 # os.environ["UserProfile"]
 # this attribute show your profile direction
-# print(os.environ["UserProfile"])
+print(os.environ["UserProfile"])
 
 
 
