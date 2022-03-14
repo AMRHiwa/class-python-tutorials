@@ -6,6 +6,7 @@
 # first we import json module
 import json
 from re import X
+from textwrap import indent
 
 # we wan to creat a string of dictionary 
 x = '{"name" : "Hiwa", "country" : "Iran", "city": "Kermanshah"}'
@@ -68,5 +69,22 @@ x = {
         {"name": "Arisan", "Model": 1394}
     ]
 }
-y = json.dumps(x)
-print(f"y is :\n{y}\ntype of y: {type(y)}")
+w = json.dumps(x)
+print(f"w is :\n{w}\ntype of w: {type(w)}")
+
+# we can give it special order by 'indent' parameter in json.dumps()
+# indent for making identation
+z = json.dumps(x, indent= 4)
+print(z)
+
+# another parameter we need to learn work with that is 'separators'
+# separator has default values ', ' and ':', that with ', ' separate the data
+# and with ":" it separate values and keys
+q = json.dumps(x, indent= 3, separators=(".", ">>"))
+print(q)
+
+# last parameter that we need to learn about json.dumps() is sort_keys
+# that sort_keys take one of two values , True or False
+# sort_keys sort the keys by alphabet
+r = json.dumps(x, indent=3, separators=(". ", ">>"), sort_keys=True)
+print(r)
