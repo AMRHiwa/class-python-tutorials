@@ -28,6 +28,47 @@ print(result_one)
 
 print(len(result_one))
 
+print("____________________________________________")
+
 # we can use pandas to load data with sqlalchemy
 # first we need to install pandas by :
 #       pip install pandas
+# then we need to import it
+import pandas as pd
+query = "SELECT * FROM users"
+data = pd.read_sql_query(query,engine)
+
+print(type(data))
+print(data)
+
+print("___________________columns_________________________")
+# we can show the database columns by .columns
+print(data.columns)
+
+print("____________________dtypes________________________")
+# also we can show database types of any columns by .dtypes
+print(data.dtypes)
+
+print("____________________head()________________________")
+# we can show the head of database's data
+print(data.head())
+
+
+print("___________________max()_________________________")
+# we can show max of one or many columns in database like:
+print(data[['password', 'username']].max())
+
+print("____________________min()________________________")
+# we can show min of one or many columns in database like:
+print(data[['password', 'username']].min())
+
+print("_____________________sum()_______________________")
+# we can show sum of one or many columns in database like:
+print(data[['password', 'username']].sum())
+
+print("______________________describe()______________________")
+# we can describe database loads by .describe() method
+print(data[["password", "username"]].describe())
+
+print("______________________dropna()______________________")
+print(data[["password", "username"]].dropna())
