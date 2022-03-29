@@ -1,3 +1,4 @@
+# ORM means Object Relation Mapping
 # for working with sqlalchemy you have to install 'sqlalchemy' python pakcage
 # by this command :
 #       pip install sqlalchemy
@@ -104,7 +105,7 @@ plt.show()
 
 
 # Anatomy of a Connection String
-# engine = create_engine('dialect[+driver]://user:password@host/dbname')
+# engine = create_engine('dialect[+driver]://user:password@host:port/dbname[?key= value]')
 #       dialect means wich sql that you used like 'mysql'.
 #       driver means that option you use to connect like 'mysqlconnector'.
 #       user means that username you enter to database by that like 'root'.
@@ -112,3 +113,20 @@ plt.show()
 #       host means address host like "localhost".
 #       dbname means database name you want it.
 #   engine = create_engine('sqlite:///sqlalchemy_sqlite.db')
+
+# create a engine for sqlite:
+#   example ->      engine_sqlite = create_engin('sqlite://importing_sqlite.db')
+
+# create a engine for mysql:
+#   example ->      engine_mysql = create_engine('mysql+mysqlconnector://root:mysql@localhost:3306/importing_mysql')
+
+# create a engine for postgresql:
+#   example ->      engine_postgresql = create_engine('postgresql://hiwa:postgre@localhost:5432/importing_postgres')
+
+# we can show the tables in database:
+#     for sqlite you can use this order:
+#             engine_sqlite.tabel_name()
+#     for mysql you can use this order:
+#             engine_mysql.tabel_name()
+#     for postgres you can use this order:
+#             engine_postgresql.tabel_name()
