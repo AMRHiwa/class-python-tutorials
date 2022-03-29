@@ -89,5 +89,26 @@ plt.xlabel("password")
 plt.ylabel("username")
 plt.legend(('password', 'username'))
 plt.show()
+# end of loading and reading items from database by sqlalchemy
 
-# end of loading and reading items from database by alchemysql
+
+# Querying with sqlalchemy
+# Connecting database
+# for connecting database we need a 'connector' and 'Connection String'
+# for installing connector for each of sql database we need to install :
+#       for sqlite, we have to install 'pysqlite'
+#       for Postgresql, we have to install 'psycopg2'
+#       for mysql,  we must to install 'mysqlconnector'
+#       for oracle, we must to install 'cx_oracle'
+#       for microsoft sqlserver, we must to install 'pyodbc'
+
+
+# Anatomy of a Connection String
+# engine = create_engine('dialect[+driver]://user:password@host/dbname')
+#       dialect means wich sql that you used like 'mysql'.
+#       driver means that option you use to connect like 'mysqlconnector'.
+#       user means that username you enter to database by that like 'root'.
+#       password means that password you entered in database.
+#       host means address host like "localhost".
+#       dbname means database name you want it.
+#   engine = create_engine('sqlite:///sqlalchemy_sqlite.db')
