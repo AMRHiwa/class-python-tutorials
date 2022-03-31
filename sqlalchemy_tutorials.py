@@ -89,7 +89,7 @@ plt.title("Data: Username and Password")
 plt.xlabel("password")
 plt.ylabel("username")
 plt.legend(('password', 'username'))
-plt.show()
+# plt.show()
 # end of loading and reading items from database by sqlalchemy
 
 
@@ -99,7 +99,7 @@ plt.show()
 # for installing connector for each of sql database we need to install :
 #       for sqlite, we have to install 'pysqlite'
 #       for Postgresql, we have to install 'psycopg2'
-#       for mysql,  we must to install 'mysqlconnector'
+#       for mysql,  we must to install 'mysql-connector'
 #       for oracle, we must to install 'cx_oracle'
 #       for microsoft sqlserver, we must to install 'pyodbc'
 
@@ -125,8 +125,47 @@ plt.show()
 
 # we can show the tables in database:
 #     for sqlite you can use this order:
-#             engine_sqlite.tabel_name()
+#             engine_sqlite.tabel_names()
 #     for mysql you can use this order:
-#             engine_mysql.tabel_name()
+#             engine_mysql.tabel_names()
 #     for postgres you can use this order:
-#             engine_postgresql.tabel_name()
+#             engine_postgresql.tabel_names()
+
+
+print("---------------connect to database---------------")
+from sqlalchemy import create_engine
+
+engine_mysql = create_engine('mysql+mysqlconnector://root:@localhost:3306/pydb')
+print(engine_mysql.table_names())
+# end of connecting to database
+
+
+
+# Classical Mapping
+print("------------Clasical Mapping-----------")
+from sqlalchemy import Table, MetaData, Column, Integer, String
+from sqlalchemy.orm import mapper
+
+metadata = MetaData()
+# create a table
+user = Table('users', metadata,
+            Column('id', Integer, primary_key=True),
+            Column('password', String),
+            Column('username',String(150)))
+
+# we need to define a class for 'family_name'
+class Users:
+    def __init__(self, password, username):
+        self.password = password
+        self.username = username
+
+# now we need to create a mapper by mapper(ClassName, variable_name of table)
+user_mapper = mapper(Users, user)
+
+# create a query
+larger = user.select(user.password > 10)
+type(larger)
+
+# execute query and show larger
+engine.execute(larger).fetchall()
+
