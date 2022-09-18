@@ -1,3 +1,4 @@
+# we need to import 'Fernet' mudole from 'cryptography.fernet'
 from cryptography.fernet import Fernet
 
 # we need a function to generate a key
@@ -13,7 +14,7 @@ def generatekey():
     #       print(str(key, 'utf-8'))
     
     # print(key)
-    # print(str(key, 'utf-8'))
+    print(f'key is : ', str(key, 'utf-8'))
     return key
 
 # now we need a function to Encrypt the message or text
@@ -29,18 +30,31 @@ def encryption(themessage, key):
     # we do it by this method from Fernet
     #       value's_name = the_value_of_store_key.encrypt(message in byte type) 
     #   like :
-    #       encryptmessage = storekey.encript(b'This is tutorial encrypting by python')
+    #       encryptmessage = storekey.encrypt(b'This is tutorial encrypting by python')
     #       or we can give it text from outside the function by argument
     encryptmessage = storekey.encrypt(themessage)
     print(f"the encrypt message is : ",str(encryptmessage, 'utf-8'))
     return encryptmessage
 
+# we need a function to decryption of encrypt message
 def decryption(encryptmessage, key):
+    # we need a value to store the generated key that we do it in this way
+    #       the_value_name = Fernet(value of key in byte type) 
+    #   like :
+    #       key1 = Fernet(b'_9uPhouCcO5bBm6o68ULD-mt6AV1qjKnmxUNH8Vl2sk=')
     storekey = Fernet(key)
+
+    # now we need to decrypt the text or message that we can give it straight or
+    # import that from another text's file and also we need a value to save decrypt message
+    # we do it by this method from Fernet
+    #       value's_name = the_value_of_store_key.decrypt(message in byte type) 
+    #   like :
+    #       decryptionmessage = storekey.decrypt(b'This is tutorial encrypting by python')
+    #       or we can give it text from outside the function by argument
     decryptionmessage = storekey.decrypt(encryptmessage)
-    print(str(decryptionmessage, "utf-8"))
+    print(f'the decrypt message : ',str(decryptionmessage, "utf-8"))
 
 key = generatekey()
 the_encrypt_message = encryption(b'hello', key)
-print(f'the encrypt message in body program : ', str(the_encrypt_message, "utf-8"))
+# print(f'the encrypt message in body program : ', str(the_encrypt_message, "utf-8"))
 decryption(the_encrypt_message, key)
