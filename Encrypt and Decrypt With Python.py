@@ -13,5 +13,20 @@ def generatekey():
     #       print(str(key, 'utf-8'))
     print(key)
     print(str(key, 'utf-8'))
-    
+    return key
+
+# now we need a function to Encrypt the message or text
+def encryption(themessage, key):
+    # we need a value to store the generated key that we do it in this way
+    #       the_value_name = Fernet(value of key in byte type) like
+    #       key1 = Fernet(b'_9uPhouCcO5bBm6o68ULD-mt6AV1qjKnmxUNH8Vl2sk=')
+    storekey = Fernet(key)
+
+    # now we need to encrypt the text or message that we can give it straight or
+    # import that from another text's file and also we need a value to save encrypt message
+    # we do it by this method from Fernet
+    #       value's_name = the_value_of_store_key.encrypt(message in byte type) like
+    #       encryptmessage = storekey.encript(b'This is tutorial encrypting by python')
+    #       or we can give it address a text file to import a text
+
 generatekey()
