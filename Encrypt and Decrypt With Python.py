@@ -1,4 +1,5 @@
 # we need to import 'Fernet' mudole from 'cryptography.fernet'
+# we must to install cryptography by pip in cmd or terminal
 from cryptography.fernet import Fernet
 
 # we need a function to generate a key
